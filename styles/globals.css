@@ -1,3 +1,8 @@
+:root {
+  --header-size: 64px;
+  --white: #ffffff;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;

@@ -13,7 +13,7 @@ In order:
 - Mobile-perfect (mobile view should be done before. Smooth mobile editing can be done after launch 1)
 - Standardize deployment to custom (purchased) domain
 - Stripe integration
-- When to use (and when not to use) Sitojo - with recommendations for other sites (blog => substack, shop => shopify, more general-purpose => Wix, Squarespace, Webflow, Weebly, Hostinger, ...)
+- When to use (and when not to use) Sitoyo - with recommendations for other sites (blog => substack, shop => shopify, more general-purpose => Wix, Squarespace, Webflow, Weebly, Hostinger, ...)
 ==> LAUNCH
 - Automate domain purchase
 - Couple email address (plus pick gmain / other email providers?) to domain
@@ -23,6 +23,3 @@ In order:
 - Google keywords indexing, PWA compatibility
 - Icon maker
 - RSS support
-
-
-
