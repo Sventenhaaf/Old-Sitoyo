@@ -1,4 +1,5 @@
-import { CSSProperties, FC } from "react";
+import { StoreContext } from "@/store/Store";
+import { CSSProperties, FC, useContext } from "react";
 
 interface Props {}
 
@@ -7,6 +8,10 @@ const style: CSSProperties = {
 };
 
 const Menu: FC<Props> = () => {
+  const {
+    state: { pages },
+  } = useContext(StoreContext);
+  console.log("PAGES", pages);
   return <div style={style}>Menu</div>;
 };
 
