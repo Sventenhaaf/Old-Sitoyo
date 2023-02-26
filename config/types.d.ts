@@ -1,21 +1,34 @@
-declare type Page = {
+declare type PAGE = {
   id: number;
   name: string;
-  sections: Section[];
-};
-
-declare type Section = {
-  id: number;
-  type: "title" | "paragraph" | "image";
-  name: string;
-  text: string;
+  sections: SECTION[];
 };
 
 declare type InitialStateType = {
-  pages: Page[];
+  pages: PAGE[];
 };
 
-declare type Action = {
+declare type ACTION = {
   type: string;
   payload: Partial<InitialStateType>;
 };
+
+declare type SECTION_TYPE = "title" | "paragraph" | "image";
+
+declare type BASE_SECTION = {
+  id: number;
+  type: SECTION_TYPE;
+};
+
+declare type TITLE_SECTION = BASE_SECTION & {
+  type: "title";
+  title: string;
+  subTitle?: string;
+};
+
+declare type PARAGRAPH_SECTION = BASE_SECTION & {
+  type: "paragraph";
+  text: string;
+};
+
+declare type SECTION = TITLE_SECTION | PARAGRAPH_SECTION;

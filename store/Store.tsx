@@ -2,13 +2,26 @@ import { FC, ReactNode, createContext, useReducer, Dispatch } from "react";
 import reducer from "./reducer";
 
 const initialState: InitialStateType = {
-  pages: [],
+  pages: [
+    {
+      id: 1,
+      name: "Home",
+      sections: [
+        {
+          id: 1,
+          type: "title",
+          title: "This is the title",
+          subTitle: "Subtitle",
+        },
+      ],
+    },
+  ],
 };
 
 const StoreContext = createContext<{
   state: InitialStateType;
-  dispatch: Dispatch<Action>;
-  addPage: (page: Page) => void;
+  dispatch: Dispatch<ACTION>;
+  addPage: (page: PAGE) => void;
 }>({
   state: initialState,
   dispatch: () => null,
@@ -23,7 +36,7 @@ const Store: FC<{ children: ReactNode }> = ({ children }) => {
       value={{
         state,
         dispatch,
-        addPage: (page: Page) =>
+        addPage: (page: PAGE) =>
           dispatch({
             type: "ADD_PAGE",
             payload: {

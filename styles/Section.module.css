@@ -1,0 +1,12 @@
+.section {
+    background: lightblue;
+}
+
+.editmode {
+    cursor: pointer;
+
+}
+
+.editmode:hover {
+    background: tomato;
+}

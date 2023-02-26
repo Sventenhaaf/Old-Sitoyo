@@ -1,6 +1,7 @@
 In order:
 - Add header, sections, footer
 - Add title, paragraph, image sections
+- Add page and find a way to route with dynamic routing
 - Have some templates ready
 - Contact section with query to be sent to account email (dont expose account email)
 - Add more sections that belong to minimal offering

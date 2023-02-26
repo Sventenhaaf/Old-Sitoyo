@@ -1,10 +1,10 @@
 // ACTIONS
-const mainReducer = (state: InitialStateType, action: Action) => {
+const mainReducer = (state: InitialStateType, action: ACTION) => {
   switch (action.type) {
-    case "Add":
-      return { ...state, ...action.payload };
+    // case "Add":
+    //   return state;
     default:
-      return state;
+      return { ...state, ...action.payload };
   }
 };
 
