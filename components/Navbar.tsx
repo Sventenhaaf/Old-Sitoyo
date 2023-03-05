@@ -11,7 +11,9 @@ interface Props {}
 const Navbar: FC<Props> = () => {
   return (
     <nav className={`${styles.navbar} ${inter.className}`}>
-      <Logo />
+      <a href="/">
+        <Logo />
+      </a>
       <Menu />
     </nav>
   );

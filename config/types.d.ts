@@ -1,6 +1,7 @@
 declare type PAGE = {
   id: number;
   name: string;
+  slug: string;
   sections: SECTION[];
 };
 

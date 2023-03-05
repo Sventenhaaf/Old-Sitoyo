@@ -4,20 +4,32 @@ import styles from "@/styles/Main.module.css";
 import Section from "@/components/Section/Section";
 import { useContext } from "react";
 import { StoreContext } from "@/store/Store";
+import { useRouter } from "next/router";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
+const Page = () => {
+  const router = useRouter();
+  const { page: slug } = router.query;
+
   const {
     addPage,
     state: { pages },
   } = useContext(StoreContext);
   // TODO: MAKE THIS DYNAMIC
-  const page = pages[0];
+  const page = pages.find((page) => page.slug === (slug || "home"));
+  if (!page)
+    return (
+      <div>
+        404 <a href="/">Back to home</a>
+      </div>
+    );
+
+  const title = "Sitoyo - " + page.name;
   return (
     <>
       <Head>
-        <title>Sitoyo</title>
+        <title>{title}</title>
         <meta name="description" content="The simplest way to make a website" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -30,4 +42,6 @@ export default function Home() {
       </main>
     </>
   );
-}
+};
+
+export default Page;

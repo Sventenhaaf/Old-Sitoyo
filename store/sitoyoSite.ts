@@ -3,20 +3,21 @@ export const site: InitialStateType = {
     {
       id: 1,
       name: "Home",
+      slug: "home",
       sections: [
         {
-          id: 1,
+          id: 101,
           type: "title",
           title: "This is the title",
           subTitle: "Subtitle",
         },
         {
-          id: 2,
+          id: 102,
           type: "paragraph",
           text: "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ",
         },
         {
-          id: 3,
+          id: 103,
           type: "image",
           imgUrl:
             "https://images.unsplash.com/photo-1676995278388-6e899b1d5fab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
@@ -26,15 +27,36 @@ export const site: InitialStateType = {
     },
     {
       id: 2,
-      name: "Pricing",
+      name: "About",
+      slug: "about",
       sections: [
         {
           id: 201,
+          type: "paragraph",
+          text: `
+          Conditions:
+          - You can keep pages hidden by not linking to them in menu nor footer. But keep in mind that this page can be found by brute force, or indexed if it was public before.
+            In general, regard your content as being public. It's a webpage so that's kind of the goal of many webpages. 
+
+            How about I have a family and want to use this as a repository for family / close friends? 
+
+            ...
+          `,
+        },
+      ],
+    },
+    {
+      id: 3,
+      name: "Pricing",
+      slug: "pricing",
+      sections: [
+        {
+          id: 301,
           type: "title",
           title: "Pricing",
         },
         {
-          id: 202,
+          id: 302,
           type: "paragraph",
           text: `
                 Monethly prices (yearly is 2 months free so 10x monthly price)
