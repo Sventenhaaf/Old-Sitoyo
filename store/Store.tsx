@@ -36,10 +36,15 @@ const Store: FC<{ children: ReactNode }> = ({ children }) => {
         addSection: (pageId: number, section: SECTION, nextId: number | null) => {
           const page = state.pages.find((p) => p.id == pageId);
           if (!page) return;
-          const index = page.sections.findIndex((s) => s.id === nextId);
-          const before = page.sections.slice(0, index);
-          const after = page.sections.slice(index);
-          const newSections = [...before, section, ...after];
+          let newSections: SECTION[] = [];
+          if (nextId === null) {
+            newSections = [...page.sections, section];
+          } else {
+            const index = page.sections.findIndex((s) => s.id === nextId);
+            const before = page.sections.slice(0, index);
+            const after = page.sections.slice(index);
+           newSections = [...before, section, ...after];
+          }
           dispatch({
             type: "ADD_SECTION",
             payload: {

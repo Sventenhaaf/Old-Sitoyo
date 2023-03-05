@@ -53,13 +53,28 @@ export const site: InitialStateType = {
         {
           id: 301,
           type: "title",
+          title: "Features",
+        },
+        {
+          id: 303,
+          type: "paragraph",
+          text: `
+          - domain purchasing
+          - accessibility
+          - unsplash images
+          - Draft mode (two versions per section, one "draft" and one "live")
+              `,
+        },
+        {
+          id: 301,
+          type: "title",
           title: "Pricing",
         },
         {
-          id: 302,
+          id: 303,
           type: "paragraph",
           text: `
-                Monethly prices (yearly is 2 months free so 10x monthly price)
+                Monthly prices (yearly is 2 months free so 10x monthly price)
                 - 0,-: free, no domain, no email, branded with sitoyo, unsplash images, ...
                 - 5,-: basic, no domain, no email, no sitoyo brands, own css, own images, one user
                 - 10,-: premium, custom domain, no gmail integration, all of the above, three users
