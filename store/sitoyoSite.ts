@@ -3,7 +3,7 @@ export const site: InitialStateType = {
     {
       id: 1,
       name: "Home",
-      slug: "home",
+      slug: "",
       sections: [
         {
           id: 101,

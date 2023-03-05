@@ -9,7 +9,7 @@ In order:
 - Contact section with query to be sent to account email (dont expose account email)
 - Add more sections that belong to minimal offering
 - Connect to BE (Next / Vercel? Deno? Supabase? Prisma? Other)
-- Set of (10? 50?) themes (Peppa Pig, Teenage Engineering, Notion, etc) A la Canva maar meer gebrand
+- Set of (10? 50?) themes (Peppa Pig, Teenage Engineering, Notion, Lego, etc) A la Canva maar meer gebrand
 ==> ALPHA LAUNCH BEFORE?
 - Icon / favicon maker? a la https://favicon.io/
 - Server side rendered website on proper domain names

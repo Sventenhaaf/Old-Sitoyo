@@ -17,7 +17,7 @@ const Page = () => {
     state: { pages },
   } = useContext(StoreContext);
   // TODO: MAKE THIS DYNAMIC
-  const page = pages.find((page) => page.slug === (slug || "home"));
+  const page = pages.find((page) => page.slug === slug || (page.slug === "" && slug === "home"));
   if (!page)
     return (
       <div>
