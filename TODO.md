@@ -2,10 +2,12 @@ In order:
 - Add header, sections, footer
 - Add title, paragraph, image sections
 - Add page and find a way to route with dynamic routing
+- Have menu done with options to show page in menu, footer, both or none
 - Have some templates ready
 - Contact section with query to be sent to account email (dont expose account email)
 - Add more sections that belong to minimal offering
 - Connect to BE (Next / Vercel? Deno? Supabase? Prisma? Other)
+- Set of (10? 50?) themes (Peppa Pig, Teenage Engineering, Notion, etc) A la Canva maar meer gebrand
 ==> ALPHA LAUNCH BEFORE?
 - Server side rendered website on proper domain names
 - Basic google indexing standard
@@ -15,6 +17,7 @@ In order:
 - Standardize deployment to custom (purchased) domain
 - Stripe integration
 - When to use (and when not to use) Sitoyo - with recommendations for other sites (blog => substack, shop => shopify, more general-purpose => Wix, Squarespace, Webflow, Weebly, Hostinger, ...)
+- Make your own design (and attract your own users with it?)
 ==> LAUNCH
 - Automate domain purchase
 - Couple email address (plus pick gmain / other email providers?) to domain
@@ -24,3 +27,4 @@ In order:
 - Google keywords indexing, PWA compatibility
 - Icon maker
 - RSS support
+- Version history / undo redo
