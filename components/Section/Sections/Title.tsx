@@ -1,5 +1,5 @@
 import { FC, useContext } from "react";
-import Editable from "./Editable";
+import Editable from "../Editable";
 import { StoreContext } from "@/store/Store";
 
 interface Props {

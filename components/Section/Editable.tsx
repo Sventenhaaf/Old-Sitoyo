@@ -15,11 +15,20 @@ const Editable: FC<Props> = ({ children, value: initialValue, onUpdate }) => {
     setIsEditing(false);
   };
 
-  return isEditing ? (
-    <input value={value} onChange={(e) => setValue(e.target.value)} autoFocus onBlur={onBlur} />
-  ) : (
-    <div onClick={() => setIsEditing(true)}>{children}</div>
-  );
+  const onKeyDown = (e: React.KeyboardEvent) => {
+    switch (e.key) {
+      case "Enter": {
+        onBlur();
+        break;
+      }
+    }
+  };
+
+    return isEditing ? (
+      <input value={value} onChange={(e) => setValue(e.target.value)} autoFocus onBlur={onBlur} onKeyDown={onKeyDown} />
+    ) : (
+      <div onClick={() => setIsEditing(true)}>{children}</div>
+    );
 };
 
 export default Editable;

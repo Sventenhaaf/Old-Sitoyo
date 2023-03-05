@@ -1,6 +1,8 @@
 In order:
 - Add header, sections, footer
 - Add title, paragraph, image sections
+- Add every section that you will want to have yourself (list / modules for pricing)
+- Navigation
 - Add page and find a way to route with dynamic routing
 - Have menu done with options to show page in menu, footer, both or none
 - Have some templates ready
@@ -18,6 +20,8 @@ In order:
 - Stripe integration
 - When to use (and when not to use) Sitoyo - with recommendations for other sites (blog => substack, shop => shopify, more general-purpose => Wix, Squarespace, Webflow, Weebly, Hostinger, ...)
 - Make your own design (and attract your own users with it?)
+- Something with socials? Easy social links etc
+- Nested pages (ie site.com/blog/welcome)
 ==> LAUNCH
 - Automate domain purchase
 - Couple email address (plus pick gmain / other email providers?) to domain

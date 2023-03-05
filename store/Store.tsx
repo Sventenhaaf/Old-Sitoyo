@@ -1,41 +1,8 @@
 import { FC, ReactNode, createContext, useReducer, Dispatch } from "react";
 import reducer from "./reducer";
+import { site } from "./sitoyoSite";
 
-const initialState: InitialStateType = {
-  pages: [
-    {
-      id: 1,
-      name: "Home",
-      sections: [
-        {
-          id: 1,
-          type: "title",
-          title: "This is the title",
-          subTitle: "Subtitle",
-        },
-        {
-          id: 2,
-          type: "title",
-          title: "This is another title",
-          subTitle: "Subtitle",
-        },
-      ],
-    },
-
-    // {
-    //   id: 1,
-    //   name: "Home",
-    //   sections: [
-    //     {
-    //       id: 1,
-    //       type: "title",
-    //       title: "This is the title",
-    //       subTitle: "Subtitle",
-    //     },
-    //   ],
-    // },
-  ],
-};
+const initialState = site;
 
 const StoreContext = createContext<{
   state: InitialStateType;

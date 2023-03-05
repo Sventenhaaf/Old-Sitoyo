@@ -31,4 +31,10 @@ declare type PARAGRAPH_SECTION = BASE_SECTION & {
   text: string;
 };
 
-declare type SECTION = TITLE_SECTION | PARAGRAPH_SECTION;
+declare type IMAGE_SECTION = BASE_SECTION & {
+  type: "image";
+  imgUrl: string;
+  description?: string;
+};
+
+declare type SECTION = TITLE_SECTION | PARAGRAPH_SECTION | IMAGE_SECTION;
