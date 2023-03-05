@@ -56,7 +56,7 @@ export const site: InitialStateType = {
           title: "Features",
         },
         {
-          id: 303,
+          id: 302,
           type: "paragraph",
           text: `
           - domain purchasing
@@ -66,12 +66,12 @@ export const site: InitialStateType = {
               `,
         },
         {
-          id: 301,
+          id: 303,
           type: "title",
           title: "Pricing",
         },
         {
-          id: 303,
+          id: 304,
           type: "paragraph",
           text: `
                 Monthly prices (yearly is 2 months free so 10x monthly price)

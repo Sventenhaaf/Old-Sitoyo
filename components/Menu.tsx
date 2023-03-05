@@ -1,5 +1,7 @@
 import { StoreContext } from "@/store/Store";
 import { CSSProperties, useState, FC, useContext } from "react";
+import Editable from "./Section/Editable";
+import { convertToSlug } from "@/util";
 
 interface Props {}
 
@@ -9,10 +11,12 @@ const style: CSSProperties = {
 
 const Menu: FC<Props> = () => {
   const [isExpanded, setIsExpanded] = useState(false);
+  const [isAddingPage, setIsAddingPage] = useState(false);
   const {
+    addPage,
     state: { pages },
   } = useContext(StoreContext);
-  console.log("PAGES", pages);
+
   if (isExpanded) {
     return (
       <div
@@ -38,6 +42,14 @@ const Menu: FC<Props> = () => {
             {page.name}
           </a>
         ))}
+        <br />
+        <Editable
+          value="New Page"
+          onUpdate={(value) => addPage({ id: 123, name: value, slug: convertToSlug(value), sections: [] })}
+        >
+          <div>+ Add Page</div>
+        </Editable>
+        {/* {isAddingPage ? (<input />): <div>+ Add Page</div>} */}
       </div>
     );
   }
