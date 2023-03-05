@@ -13,7 +13,6 @@ interface Props {
 }
 
 const Page: FC<Props> = ({ page }) => {
-  const { addPage } = useContext(StoreContext);
   const title = "Sitoyo - " + page.name;
 
   return (
@@ -28,11 +27,11 @@ const Page: FC<Props> = ({ page }) => {
       <main className={`${inter.className} ${styles.main}`}>
         {page.sections.map((section) => (
           <Fragment key={section.id}>
-            <Add nextId={section.id} />
+            <Add nextId={section.id} page={page} />
             <Section section={section} />
           </Fragment>
         ))}
-        <Add nextId={null} />
+        <Add nextId={null} page={page} />
       </main>
     </>
   );
